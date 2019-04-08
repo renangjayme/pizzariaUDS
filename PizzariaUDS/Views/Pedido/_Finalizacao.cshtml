@@ -1,0 +1,58 @@
+﻿@model Site.Models.PedidoViewModel
+
+@using (@Html.BeginForm())
+{
+<div id="divFinalizacao">
+
+    <br />
+    <br />
+
+    <div class="row col-md-offset-5">
+        <label>Tamanho: @Model.Tamanho.Descricao</label>
+        <label> - R$ @string.Format("{0:0.00}", Model.Tamanho.Valor)</label>
+    </div>
+
+    <br />
+
+    <div class="row col-md-offset-5">
+        <label>Sabor: @Model.Sabor.Descricao</label>
+    </div>
+
+    <br />
+
+    <div class="row col-md-offset-5">
+        <label>Personalizações:</label>
+    </div>
+
+    @{
+        foreach (var personalizacao in Model.Personalizacoes.Where(p => p.Selecionado == true))
+        {
+            <div class="row col-md-offset-5">
+                <label>
+                    @personalizacao.Descricao
+                </label>
+
+                @if (personalizacao.Valor > 0)
+                {
+                    <label>
+                        - R$ @string.Format("{0:0.00}", personalizacao.Valor)
+                    </label>
+                }
+            </div>
+        }
+    }
+
+    <br />
+
+    <div class="row col-md-offset-5">
+        <label>Valor Total: R$ @string.Format("{0:0.00}", Model.ValorTotal)</label>
+    </div>
+
+    <br />
+
+    <div class="row col-md-offset-5">
+        <label>Tempo de Preparo: @Model.TempoPreparo min</label>
+    </div>
+
+</div>
+}

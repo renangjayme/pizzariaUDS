@@ -1,0 +1,9 @@
+﻿@model Site.Models.PedidoViewModel
+
+@{
+    ViewBag.Title = "Pizzaria UDS";
+}
+
+<div id="divPrincipal" class="row form-group">
+   @Html.Partial("_MontarPizza", Model)
+</div>
