@@ -1,0 +1,10 @@
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\obj\Debug\Infraestrutura.csprojAssemblyReference.cache
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\obj\Debug\Infraestrutura.csproj.CoreCompileInputs.cache
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\bin\Debug\Infraestrutura.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\bin\Debug\Infraestrutura.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\bin\Debug\Dominio.Entidades.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\bin\Debug\Dominio.Entidades.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\obj\Debug\Infraestrutura.csproj.CopyComplete
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\obj\Debug\Infraestrutura.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\obj\Debug\Infraestrutura.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Infraestrutura\bin\Debug\Infraestrutura.dll.config

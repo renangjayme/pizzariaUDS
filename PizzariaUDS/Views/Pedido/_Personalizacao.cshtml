@@ -1,0 +1,72 @@
+﻿@model Site.Models.PedidoViewModel
+
+<script>
+    function Confirmar() {
+        
+        var form = $("form").serialize();
+
+        $.ajax({
+            url: "/Pedido/FinalizarPedido",
+            type: 'put',
+            data: form,
+            beforeSend: function () {
+                $("#divPrincipal").html("<br/><br/>Aguarde...");
+            }
+        })
+        .done(function (data) {
+            $("#divPrincipal").html(data);
+        })
+        .fail({
+        });
+    };
+</script>
+
+@using (@Html.BeginForm())
+{
+<div id="divPersonalizacao">
+
+    @Html.HiddenFor(m => m.Id)
+    @Html.HiddenFor(m => m.Tamanho.Id)
+    @Html.HiddenFor(m => m.Sabor.Id)
+    @Html.HiddenFor(m => m.TempoPreparo)
+    @Html.HiddenFor(m => m.ValorTotal)
+
+    <br />
+    <br />
+
+    <div class="row col-md-offset-5">
+        @Html.DisplayNameFor(m => m.Personalizacoes)
+    </div>
+
+    @{
+        var i = 0;
+
+        while (i < Model.Personalizacoes.Count())
+        {
+    <div class="row col-md-offset-5">
+
+        @Html.HiddenFor(m => m.Personalizacoes[i].Id)
+        @Html.HiddenFor(m => m.Personalizacoes[i].Descricao)
+        @Html.HiddenFor(m => m.Personalizacoes[i].Valor)
+        @Html.HiddenFor(m => m.Personalizacoes[i].Tempo)
+
+        @Html.CheckBoxFor(m => m.Personalizacoes[i].Selecionado, new { @class = "ckPersonalizacao" })
+        <label>@Model.Personalizacoes[i].Descricao</label>
+        @if (Model.Personalizacoes[i].Valor > 0)
+        {
+            <label>
+                - R$ @string.Format("{0:0.00}", Model.Personalizacoes[i].Valor)
+            </label>
+        }
+
+    </div>
+
+            i++;
+        }
+    }
+
+    <div id="divComandos" class="col-md-offset-10 col-md-2">
+        <button type=button class="btn-success" onclick="Confirmar()">Confirmar <span class="glyphicon glyphicon-ok"></span></button>
+    </div>
+</div>
+}

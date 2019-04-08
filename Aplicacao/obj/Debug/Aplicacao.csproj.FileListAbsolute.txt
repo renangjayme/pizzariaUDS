@@ -1,0 +1,14 @@
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\obj\Debug\Aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Aplicacao.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Aplicacao.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Dominio.Entidades.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Dominio.Servicos.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Infraestrutura.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Dominio.Servicos.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Dominio.Entidades.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Infraestrutura.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\obj\Debug\Aplicacao.csprojAssemblyReference.cache
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\obj\Debug\Aplicacao.csproj.CopyComplete
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\obj\Debug\Aplicacao.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\obj\Debug\Aplicacao.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Aplicacao\bin\Debug\Infraestrutura.dll.config

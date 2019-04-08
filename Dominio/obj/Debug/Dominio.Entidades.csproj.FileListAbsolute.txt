@@ -1,0 +1,5 @@
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Dominio\bin\Debug\Dominio.Entidades.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Dominio\bin\Debug\Dominio.Entidades.pdb
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Dominio\obj\Debug\Dominio.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Dominio\obj\Debug\Dominio.Entidades.dll
+C:\Users\renan\Documents\GitHub\pizzariaUDS\Dominio\obj\Debug\Dominio.Entidades.pdb

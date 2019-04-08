@@ -1,0 +1,83 @@
+﻿@model Site.Models.PedidoViewModel
+
+<script>
+
+    function Confirmar() {
+
+        if (($("input[type='radio'][name='Tamanho.Id']").is(':checked')) && ($("input[type='radio'][name='Sabor.Id']").is(':checked'))) {
+
+            $(".validacao").hide();
+
+            var form = $("form").serialize();
+
+            $.ajax({
+                url: "/Pedido/InserirPedido",
+                type: 'post',
+                data: form,
+                beforeSend: function () {
+                    $("#divPrincipal").html("<br/><br/>Aguarde...");
+                }
+            })
+                .done(function (data) {
+                    $("#divPrincipal").html(data);
+                })
+                .fail({
+                });
+        }
+        else {
+            alert("Necessário selecionar um tamanho e um sabor.")
+        }
+    };
+
+</script>
+
+@using (@Html.BeginForm())
+{
+    <div id="divMontarPizza">
+
+        <br />
+        <br />
+
+        <div id="divTamanho" class="row col-md-offset-5">
+            @{
+                <div class="row">
+                    <h4>@Html.DisplayNameFor(m => m.Tamanho)</h4>
+                </div>
+
+                foreach (var tamanho in Model.Tamanhos)
+                {
+                <div class="row">
+                    @Html.RadioButton("Tamanho.Id", tamanho.Id, new { @class = "rbTamanho" }) <label>@tamanho.Descricao - R$ @string.Format("{0:0.00}", tamanho.Valor)</label>
+                </div>
+                }
+            }
+
+        </div>
+
+        <br />
+        <br />
+
+        <div id="divSabor" class="row col-md-offset-5">
+            @{
+                <div class="row">
+                    <h4>@Html.DisplayNameFor(m => m.Sabor)</h4>
+                </div>
+
+                foreach (var sabor in Model.Sabores)
+                {
+                    <div class="row">
+                        @Html.RadioButton("Sabor.Id", sabor.Id, new { @class = "rbSabores" }) <label>@sabor.Descricao</label>
+                    </div>
+                }
+
+            }
+        </div>
+
+
+        <br />
+
+        <div id="divComandos" class="col-md-offset-8 col-md-2">
+            <button type=button id="btnConfirma" class="btn-success" onclick="Confirmar()">Confirmar <span class="glyphicon glyphicon-ok"></span></button>
+        </div>
+    </div>
+}
